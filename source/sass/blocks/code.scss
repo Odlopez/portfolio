@@ -1,0 +1,10 @@
+.code {
+  position: fixed;
+  top: 20%;
+  left: 40%;
+  z-index: -5;
+
+  font-size: 20px;
+  font-family: $font;
+  color: darken($color: $blue, $amount: 0);
+}
