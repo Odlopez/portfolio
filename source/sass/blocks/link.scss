@@ -1,0 +1,15 @@
+.link {
+  color: $red;
+
+  &:hover {
+    color: lighten($red, 5);
+  }
+
+  &:active {
+    color: darken($red, 5);
+  }
+
+  // &:visited {
+  //   color: $violet;
+  // }
+}
