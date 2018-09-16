@@ -1,0 +1,56 @@
+.card {
+  width: 45%;
+  padding: 24px;
+  margin-bottom: 64px;
+  border: 2px solid $pink;
+  box-shadow: 10px 10px 0 0 $dgray;
+
+  &:nth-of-type(4n+2),
+  &:nth-of-type(4n+3) {
+    border: 2px solid $violet;
+  }
+}
+
+.card__title {
+  font-size: 22px;
+  line-height: 27px;
+  margin-top: 0;
+  margin-bottom: 27px;
+}
+
+.card__tag {
+  display: inline-flex;
+  padding: 0 8px;
+  margin-bottom: 4px;
+
+  font-family: "Space Mono", monospace;
+  color: $yellow;
+
+  &--html {
+    color: $orange;
+  }
+
+  &--css {
+    color: $cyan;
+  }
+
+  &--sass {
+    color: $pink;
+  }
+
+  &--gulp {
+    color: $red;
+  }
+
+  &--resp {
+    color: $green;
+  }
+
+  &--adpt {
+    color: $bluegreen;
+  }
+
+  &--js {
+    color: lighten($color: $yellow, $amount: 20);
+  }
+}

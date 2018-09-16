@@ -57,6 +57,7 @@ gulp.task("copy", function () {
     "source/js/**",
     "source/php/*.php",
     "source/videos/**",
+    "source/audios/**",
     "source/**/*.html",
     "source/**/*.ico"
   ], {

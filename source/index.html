@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +8,245 @@
   <title>Document</title>
 </head>
 <body>
-  <h1 class="title">Heading 1</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque enim quas, veniam reiciendis recusandae sapiente velit quia nam voluptas maiores quis earum illum vero, obcaecati debitis? Architecto voluptatibus aliquam odit!</p>
-  <h2 class="title title--line">Heading 2</h2>
-  <p>Commodi, doloribus excepturi? Iure consequuntur porro, labore blanditiis rem vel ullam dolor qui esse mollitia dolore, tempore excepturi quisquam repellat quae maxime. Fuga aut doloremque quos optio numquam. Cumque, ut?</p>
-  <p>Bla-bla-bla-bla-bla <a class="link" href="https://webformyself.com/50-kreativnyx-portfolio-sajtov/">Hi, I'm Link!</a> bla-bla-bla...</p>
-  <div class="card card--gllacy">
-    <p class="card__title"><a class="link" href="#">Random card with dead long title. Bla-bla-bla-bla-bla-bla-bla-bla.</a></p>
-    <p class="card__copy">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam voluptatibus aut quidem doloribus temporibus sequi voluptatem veritatis.</p>
-    <p class="card__tags">
-      <span class="card__tag card__tag--html">#HTML</span>
-      <span class="card__tag card__tag--css">#CSS</span>
-      <span class="card__tag card__tag--sass">#SASS</span>
-      <span class="card__tag card__tag--gulp">#Gulp</span>
-      <span class="card__tag card__tag--resp">#Responsive</span>
-      <span class="card__tag card__tag--adpt">#Adaptive</span>
-      <span class="card__tag card__tag--js">#JavaScript</span>
-      <span class="card__tag">#Babel</span>
-    </p>
-    <a class="button" href="#"><span class="button__icon"></span> View on GitHub</a>
+  <div class="container">
+    <!-- HEADER -->
+    <header class="header">
+      <a href="#">
+        <h3 class="title">Palkin-logo</h3>
+      </a>
+    </header>
+    <!--end HEADER -->
+
+    <!-- MAIN -->
+    <main class="main">
+      <h1 class="title main__title">Heading 1</h1>
+      <!-- ABOUT-ME -->
+      <section class="about-me" id="about-me">
+        <h2 class="title about-me__title">Немного обо мне</h2>
+        <p class="about-me__text">
+          Привет, меня зовут Александр. И я люблю frontend.
+        </p>
+        <p class="about-me__text">
+          Живу в г. Донецк, но готов к смене дислокации, если будет интересно.
+        </p>
+        <p class="about-me__text">
+          Имею опыт в руководящей должности, так что отлично знаю, чего руководитель ждет от работника.
+        </p>
+        <p class="about-me__text">
+          В текущий момент времени я работаю верстальщиком в <a class="link" href="https://liga-a.ru/" target="_blank">Лиге-А</a>
+        </p>
+        <h4 class="title about-me__subtitle">В работе использую:</h4>
+        <ul class="about-me__list">
+          <li class="about-me__item">HTML5</li>
+          <li class="about-me__item">CSS3</li>
+          <li class="about-me__item">Gulp</li>
+          <li class="about-me__item">SASS/SCSS/LESS</li>
+          <li class="about-me__item">JavaScript</li>
+          <li class="about-me__item">Canvas</li>
+          <li class="about-me__item">SVG</li>
+          <li class="about-me__item">AJAX</li>
+          <li class="about-me__item">БЭМ</li>
+          <li class="about-me__item">Адаптивная верстка</li>
+          <li class="about-me__item">Резиновая верстка</li>
+          <li class="about-me__item">Валидная и семантичная верстка</li>
+          <li class="about-me__item">CSS-анимации</li>
+          <li class="about-me__item">JS-анимации</li>
+          <li class="about-me__item">Mobile/desktop first</li>
+          <li class="about-me__item">немного PHP</li>
+        </ul>
+        <p class="about-me__text">
+          Портфолио немного
+          <a class="about-me__link link" href="#portfolio">
+            ниже <span class="about-me__arrow">&#8595;</span>
+          </a>
+        </p>
+      </section>
+      <!--end ABOUT-ME -->
+
+      <!-- ABOUT-YOU -->
+      <section class="about-you" id="about-you">
+        <h2 class="title about-you__title">Немного о вас</h2>
+        <p class="about-you__text">
+          Выберите наиболее предпочтительные для вас параметры трудовой деятельности:
+        </p>
+        <div class="about-you__switch-inner">
+          <input class="about-you__input" type="checkbox" id="in1">
+          <label class="about-you__toggle" for="in1">Быстро</label>
+
+          <input class="about-you__input" type="checkbox" id="in2">
+          <label class="about-you__toggle" for="in2">Качественно</label>
+
+          <input class="about-you__input" type="checkbox" id="in3">
+          <label class="about-you__toggle" for="in3">Дешево</label>
+        </div>
+      </section>
+      <!-- ABOUT-YOU -->
+
+      <!-- PORTFOLIO -->
+      <section class="portfolio" id="portfolio">
+        <h2 class="title portfolio__title">Портфолио</h2>
+        <!-- gllacy -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/gllacy/" target="_blank">Учебный проект Gllacy</a>
+          </p>
+          <p class="card__copy">
+            Интернет-магазин по продаже мороженого
+          </p>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--sass">#LESS</span>
+            <span class="card__tag card__tag--resp">#Responsive</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+          </p>
+          <a class="button" href="https://github.com/Odlopez/615813-gllacy" target="_blank"><span class="button__icon"></span> View on GitHub</a>
+        </div>
+        <!--end gllacy -->
+
+        <!-- cat -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/cat/" target="_blank">Учебный проект Cat-Energy</a>
+          </p>
+          <p class="card__copy">
+            Адаптивный сайт интернет-магазина по продаже корма для котов
+          </p>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--sass">#LESS</span>
+            <span class="card__tag card__tag--adpt">#Adaptive</span>
+            <span class="card__tag card__tag--resp">#Responsive</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+          </p>
+          <a class="card__button button" href="https://github.com/Odlopez/615813-cat-energy" target="_blank"><span class="button__icon"></span> View on GitHub</a>
+        </div>
+        <!--end cat -->
+
+        <!-- memory -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/memory/" target="_blank">Карточная игра Memory</a>
+          </p>
+          <p class="card__copy">
+            Симпатичная игра для детей и взрослых, помогающая развлечся и развить память
+          </p>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--sass">#LESS</span>
+            <span class="card__tag card__tag--resp">#Responsive</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+          </p>
+          <a class="card__button button" href="https://github.com/Odlopez/memory" target="_blank"><span class="button__icon"></span> View on GitHub</a>
+        </div>
+        <!--end memory -->
+
+        <!-- chulakov -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/chulakov-test/" target="_blank">Проект по тестовому заданию</a>
+          </p>
+          <p class="card__copy">
+            Задание предполагало верстку сайта по макету, а так же разработку адаптивноси на усмотрение исполнителя и js-валидацию формы.
+          </p>
+          <p class="card__copy">
+            Дополнительно был реализован простой графический редактор, работающий по следующему принципу:
+          </p>
+          <p class="card__copy">
+            -при нажатии на холст, в месте клика появляется точка, которая соединена линиями с двумя предыдущими точками.
+          </p>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--sass">#LESS</span>
+            <span class="card__tag card__tag--adpt">#Adaptive</span>
+            <span class="card__tag card__tag--resp">#Responsive</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+            <span class="card__tag">#Canvas</span>
+          </p>
+          <a class="card__button button" href="https://github.com/Odlopez/chulakov-test" target="_blank"><span class="button__icon"></span> View on GitHub</a>
+        </div>
+        <!--end chulakov -->
+
+        <!-- animation -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/test/" target="_blank">Анимация (тестовое задание)</a>
+          </p>
+          <p class="card__copy">
+            Лендинг со сложной css-анимацией
+          </p>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--sass">#LESS</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+            <span class="card__tag">#SVG</span>
+          </p>
+          <a class="card__button button" href="https://github.com/Odlopez/test" target="_blank"><span class="button__icon"></span> View on GitHub</a>
+        </div>
+        <!--end animation -->
+
+        <!-- keksobooking -->
+        <div class="portfolio__card card">
+          <p class="card__title">
+            <a class="link" href="http://odlopez.tk/keksobooking/" target="_blank">Учебный проект Keksobooking</a>
+          </p>
+          <p class="card__copy">
+            Кексобукинг — сервис размещения объявлений о сдаче в аренду недвижимости в центре Токио. Пользователям предоставляется возможность размещать объявления о своей недвижимости или просматривать уже размещённые объявления.
+          </p>
+          <p class="card__tags">
+            <span class="card__tag card__tag--html">#HTML</span>
+            <span class="card__tag card__tag--css">#CSS</span>
+            <span class="card__tag card__tag--js">#JavaScript</span>
+            <span class="card__tag">#AJAX</span>
+          </p>
+          <a class="card__button button" href="https://github.com/Odlopez/keksobooking" target="_blank"><span class="button__icon"></span> View on GitHub</a>
+        </div>
+        <!--end keksobooking -->
+      </section>
+      <!--end PORTFOLIO -->
+
+      <!-- MUSIC -->
+      <section class="music">
+        <h2 class="music__title title">Музыкальная пауза</h2>
+        <p class="music__text">
+          В отрочестве я увлекался музыкой. Можно послушать. Но лучше не надо.)
+        </p>
+        <div class="misuc__inner">
+          <audio class="music__audio" controls volume="0.5">
+            <source src="audios/Питер.ogg" type="audio/ogg">
+            <source src="audios/Питер.mp3" type="audio/mp3">
+            Ваш браузер не поддерживает тег audio!
+          </audio>
+          <audio class="music__audio" controls volume="0.5">
+            <source src="audios/Славянин.ogg" type="audio/ogg">
+            <source src="audios/Славянин.mp3" type="audio/mp3">
+            Ваш браузер не поддерживает тег audio!
+          </audio>
+          <audio class="music__audio" controls volume="0.5">
+            <source src="audios/8-марта.ogg" type="audio/ogg">
+            <source src="audios/8-марта.mp3" type="audio/mp3">
+            Ваш браузер не поддерживает тег audio!
+          </audio>
+        </div>
+      </section>
+      <!--end MUSIC -->
+
+    </main>
+    <!--end MAIN -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <h5 class="title">Контакты будут тут</h5>
+    </footer>
+    <!--end FOOTER -->
   </div>
 
-  <script src="js/goods.js"></script>
+  <!-- SCRIPTS -->
+  <script src="js/toggle.js"></script>
+  <!-- SCRIPTS -->
 </body>
 </html>
