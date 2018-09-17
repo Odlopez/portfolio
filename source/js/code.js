@@ -6,7 +6,7 @@
     left: [5, 10, 15, 60, 70, 80],
     duration: [2500, 3000, 4500, 5500],
     timingFunctions: ['parabola', 'twoMount'],
-    fontSize: [20, 18, 14, 24, 28],
+    fontSize: [1.125, 0.875, 1.25, 1.5, 1.75],
     code: [
       `for(let i = 0; i <= options.length; i++) {
         createCard(i);
@@ -58,7 +58,7 @@
 
     code.style.top = CODE_OPTIONS.top[getRandomNumber(CODE_OPTIONS.top.length - 1)] + '%';
     code.style.left = CODE_OPTIONS.left[getRandomNumber(CODE_OPTIONS.left.length - 1)] + '%';
-    code.style.fontSize = CODE_OPTIONS.fontSize[getRandomNumber(CODE_OPTIONS.fontSize.length - 1)] + 'px';
+    code.style.fontSize = CODE_OPTIONS.fontSize[getRandomNumber(CODE_OPTIONS.fontSize.length - 1)] + 'rem';
 
     var writeCode = function (progress) {
       var segment = (to - from) * progress + from;

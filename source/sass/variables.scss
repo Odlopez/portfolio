@@ -1,5 +1,6 @@
 // Fonts
-
+$size-d: 16;
+$size-t: 13;
 $font: "IBM Plex Sans", sans-serif;
 
 // colors
@@ -16,3 +17,8 @@ $yellow: rgba(215, 169, 72, 1);
 $pink: rgba(173, 67, 82, 1);
 $orange: rgba(227, 120, 81, 1);
 $bluegreen: rgba(14, 115, 96, 1);
+
+// dimensions
+
+$tablet: 620px;
+$mobile: 400px;

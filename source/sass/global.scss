@@ -1,9 +1,12 @@
 body {
   margin: 0 auto;
-  background: $black;
-  color: $lgray;
-  font-family: $font;
   overflow-x: hidden;
+
+  font-family: $font;
+  font-size: #{$size-d}px;
+  color: $lgray;
+
+  background: $black;
 }
 
 img {
@@ -17,6 +20,13 @@ a {
 
 html {
   box-sizing: border-box;
+  min-width: $mobile;
+
+  font-size: #{$size-d}px;
+
+  @media (max-width: $tablet) {
+    font-size: #{$size-t}px;
+  }
 }
 
 *,
