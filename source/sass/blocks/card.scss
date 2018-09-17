@@ -1,7 +1,11 @@
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 45%;
-  padding: 24px;
   margin-bottom: 64px;
+  padding: 24px;
+
   border: 2px solid $pink;
   box-shadow: 10px 10px 0 0 $dgray;
 
@@ -12,16 +16,43 @@
 }
 
 .card__title {
-  font-size: 22px;
-  line-height: 27px;
   margin-top: 0;
   margin-bottom: 27px;
+
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.card__text {
+  position: relative;
+
+  max-height: 91px;
+  overflow: hidden;
+}
+
+.card__button-wrap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  display: none;
+  justify-content: flex-end;
+  width: 100%;
+  height: auto;
+
+  background-color: $black;
+}
+
+.card__text-button {
+  background-color: $black;
+  border: none;
+  cursor: pointer;
 }
 
 .card__tag {
   display: inline-flex;
-  padding: 0 8px;
   margin-bottom: 4px;
+  padding: 0 8px;
 
   font-family: "Space Mono", monospace;
   color: $yellow;
@@ -53,4 +84,8 @@
   &--js {
     color: lighten($color: $yellow, $amount: 20);
   }
+}
+
+.card__button {
+  margin-top: auto;
 }

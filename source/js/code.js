@@ -2,22 +2,33 @@
 
 (function () {
   var CODE_OPTIONS = {
-    top: [30, 40, 25, 60, 70],
+    top: [10, 30, 40, 25, 60, 70, 90],
     left: [5, 10, 15, 60, 70, 80],
     duration: [2500, 3000, 4500, 5500],
-    timingFunctions: ['parabola', 'linear', 'twoMount'],
+    timingFunctions: ['parabola', 'twoMount'],
     fontSize: [20, 18, 14, 24, 28],
     code: [
-      'for(let i = 0; i <= arr.length; i++) {}',
-      'var getRandomNumber = function (to, from) {',
-      'transform: translateX(-50%) scale(1.2)',
-      'CODE_OPTIONS.timingFunctions[getRandomNumber(CODE_OPTIONS.timingFunctions.length - 1)]',
+      `for(let i = 0; i <= options.length; i++) {
+        createCard(i);
+      }`,
+      `const getRandomNumber = function (to, from) {
+        from = from || 0;
+
+        return Math.round(Math.random() * (to - from) + from);
+      };`,
+      `flex-basis: 50%;\ntransform: translateX(-50%) scale(1.2);`,
+      'CODE_OPTIONS.timingFunctions[getRandomNumber(options.length - 1)]',
       'requestAnimationFrame(animation);',
-      'return -38.092 * Math.pow(timeFraction, 4) + 69.666 * Math.pow(timeFraction, 3) - 39.451 * Math.pow(timeFraction, 2) + 7.8369 * timeFraction - 0.0432;'
+      'return 38.92 * Math.pow(timeFraction, 4) - 69.67 * Math.pow(timeFraction, 3) + 39.451;',
+      `const clearCode = function () {
+        code.textContent = '';
+
+        const delay = (set) ? set.time : 0;`
     ]
   };
-  var REPEAT_DURATION = [7000, 20000];
-  var code = document.createElement('p');
+  var REPEAT_DURATION = [2000, 7000];
+  var code = document.createElement('pre');
+  var preview = null;
 
   var getRandomNumber = function (to, from) {
     from = from || 0;
@@ -34,7 +45,12 @@
   };
 
   var createCode = function () {
-    var str = CODE_OPTIONS.code[getRandomNumber(CODE_OPTIONS.code.length - 1)];
+    do {
+      var str = CODE_OPTIONS.code[getRandomNumber(CODE_OPTIONS.code.length - 1)];
+    } while (str === preview);
+
+    preview = str;
+
     var timingFunction = CODE_OPTIONS.timingFunctions[getRandomNumber(CODE_OPTIONS.timingFunctions.length - 1)];
     var duration =  CODE_OPTIONS.duration[getRandomNumber(CODE_OPTIONS.duration.length - 1)];
     var from = 0;
