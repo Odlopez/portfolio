@@ -6,7 +6,7 @@
     left: [5, 10, 15, 60, 70, 80],
     duration: [2500, 3000, 4500, 5500],
     timingFunctions: ['parabola', 'twoMount'],
-    fontSize: [1.125, 0.875, 1.25, 1.5, 1.75],
+    fontSize: [1.125, 0.875, 1.25, 1.5],
     code: [
       `for(let i = 0; i <= options.length; i++) {
         createCard(i);
@@ -16,14 +16,48 @@
 
         return Math.round(Math.random() * (to - from) + from);
       };`,
-      `flex-basis: 50%;\ntransform: translateX(-50%) scale(1.2);`,
+      `
+      flex-basis: 50%;
+      transform: translateX(-50%) scale(1.2);
+      border: 2px solid $pink;
+      box-shadow: 10px 10px 0 0 $dgray;
+
+        &:nth-of-type(4n+2),
+        &:nth-of-type(4n+3) {
+          border: 2px solid $violet;
+        }`,
       'CODE_OPTIONS.timingFunctions[getRandomNumber(options.length - 1)]',
-      'requestAnimationFrame(animation);',
-      'return 38.92 * Math.pow(timeFraction, 4) - 69.67 * Math.pow(timeFraction, 3) + 39.451;',
+      `var progress = timingFunction(timeFraction);
+
+      draw(progress);
+
+      if (timeFraction < 1) {
+        requestAnimationFrame(animation);
+      }`,
+      `circ: function (timeFraction) {
+        return 1 - Math.sin(Math.acos(timeFraction));
+      },
+      linear: function (timeFraction) {
+        return timeFraction;
+      },`,
       `const clearCode = function () {
         code.textContent = '';
 
-        const delay = (set) ? set.time : 0;`
+        const delay = (set) ? set.time : 0;`,
+      `const sortFisherYates = function (arr, getNewArray) {
+        let j;
+
+        if (getNewArray) {
+          arr = arr.slice(0);
+        }
+
+        for (let i = arr.length - 1; i > 0; i--) {
+          j = getRandomNumber(arr.length - 1);
+          [arr[j], arr[i]] = [arr[i], arr[j]]
+        }
+
+        return arr;
+      };`
     ]
   };
   var REPEAT_DURATION = [2000, 7000];

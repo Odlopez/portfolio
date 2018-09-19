@@ -6,9 +6,12 @@
   var onTextHideButtonClick = function (e) {
     e.preventDefault();
 
-    e.target.closest('.card__text').style.overflow = 'visible';
-    e.target.closest('.card__text').style.maxHeight = 'none';
-    e.target.closest('.card__button-wrap').style.position = 'relative';
+    var parent = e.target.closest('.card__text');
+    var buttonWrap = e.target.closest('.card__button-wrap');
+    var height = parent.clientHeight + parent.querySelector('.card__copy-wrap').clientHeight;
+
+    parent.style.maxHeight = `${height}px`;
+    buttonWrap.style.position = 'relative';
 
     e.target.removeEventListener('click', onTextHideButtonClick);
     e.target.innerHTML = `Свернуть &#8593;`;

@@ -5,8 +5,10 @@
   width: 45%;
   margin-bottom: 64px;
   padding: 24px;
+
   font-size: #{$size-d}px;
 
+  background-color: $black;
   border: 2px solid $pink;
   box-shadow: 10px 10px 0 0 $dgray;
 
@@ -29,6 +31,8 @@
 
   max-height: 91px;
   overflow: hidden;
+
+  transition: max-height 0.3s cubic-bezier(0.61, 0.87, 0.96, 0.99);
 }
 
 .card__button-wrap {
@@ -56,6 +60,8 @@
   padding: 0 8px;
 
   font-family: "Space Mono", monospace;
+  font-size: (18em/16);
+  line-height: (20em/16);
   color: $yellow;
 
   &--html {
