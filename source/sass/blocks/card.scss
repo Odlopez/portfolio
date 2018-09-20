@@ -22,14 +22,14 @@
   margin-top: 0;
   margin-bottom: 27px;
 
-  font-size: (22em/16);
-  line-height: (27em/16);
+  font-size: (22em/$size-d);
+  line-height: (27em/22);
 }
 
 .card__text {
   position: relative;
 
-  max-height: 91px;
+  max-height: 100px;
   overflow: hidden;
 
   transition: max-height 0.3s cubic-bezier(0.61, 0.87, 0.96, 0.99);
@@ -49,6 +49,11 @@
 }
 
 .card__text-button {
+  padding-right: 0;
+
+  text-decoration: none;
+  text-align-last: left;
+
   background-color: $black;
   border: none;
   cursor: pointer;
@@ -59,9 +64,9 @@
   margin-bottom: 4px;
   padding: 0 8px;
 
+  font-size: 1em;
+  line-height: (20em/$size-d);
   font-family: "Space Mono", monospace;
-  font-size: (18em/16);
-  line-height: (20em/16);
   color: $yellow;
 
   &--html {

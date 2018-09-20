@@ -3,6 +3,7 @@ body {
   overflow-x: hidden;
 
   font-family: $font;
+  text-rendering: optimizeSpeed;
   font-size: #{$size-d}px;
   color: $lgray;
 
