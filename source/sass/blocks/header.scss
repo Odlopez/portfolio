@@ -1,4 +1,60 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+
+  &--open {
+    & .header__overlay {
+      display: block;
+      position: fixed;
+      z-index: 90;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(63, 63, 70, 0.7);
+    }
+
+    & .main-menu {
+      top: 0;
+      right: 0;
+      position: fixed;
+      background-color: rgba(37, 33, 45, 1);
+      z-index: 100;
+      padding: 50px;
+      display: block;
+      width: 75%;
+    }
+
+    & .main-menu__list {
+      display: block;
+      flex-direction: column;
+      list-style-type: square;
+    }
+
+    & .main-menu__button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-image: url("../img/menu-btn-close.svg");
+    }
+  }
+}
+
+.header__overlay {
+  display: none;
+}
+
 .header__svg {
   width: 150px;
   height: 50px;
+}
+
+.header__logo-link {
+  margin-right: 50px;
+
+  @media (max-width: $tablet) {
+    margin-right: 0;
+  }
 }

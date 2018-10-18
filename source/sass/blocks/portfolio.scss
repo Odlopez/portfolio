@@ -3,15 +3,13 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .portfolio__title {
   width: 100%;
-}
-
-@media (max-width: $tablet) {
-  .portfolio {
-    flex-direction: column;
-    align-items: center;
-  }
 }

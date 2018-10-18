@@ -1,0 +1,30 @@
+.main-menu__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.main-menu__item {
+  padding: 10px;
+
+  @media (max-width: $mobile) {
+    font-size: 30px;
+  }
+}
+
+.main-menu__button {
+  width: 50px;
+  height: 50px;
+  background: transparent url("../img/menu-btn.svg") no-repeat;
+  border: none;
+  display: none;
+
+  @media (max-width: $mobile) {
+    display: block;
+  }
+}

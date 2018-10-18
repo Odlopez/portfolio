@@ -18,7 +18,7 @@
         #logo-micro {
           display: none;
         }
-        @media (max-width: 620px) {
+        @media (max-width: 768px) {
           #logo-full {
             display: none;
           }
@@ -58,11 +58,32 @@
   <div class="container">
     <!-- HEADER -->
     <header class="header">
-      <a href="#">
+      <div class="header__overlay"></div>
+      <a class="header__logo-link"href="#">
         <svg class="header__svg" width="150" height="50">
           <use xlink:href="#logo-svg"></use>
         </svg>
       </a>
+      <nav class="header__navigation main-menu">
+        <ul class="main-menu__list">
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#about-me">Обо мне</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#about-you">О вас</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#portfolio">Портфолио</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#music">Хобби</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link link" href="#footer">Контакты</a>
+          </li>
+        </ul>
+        <button class="main-menu__button" type="button"></button>
+      </nav>
     </header>
     <!--end HEADER -->
 
@@ -301,7 +322,7 @@
       <!--end PORTFOLIO -->
 
       <!-- MUSIC -->
-      <section class="music">
+      <section class="music" id="music">
         <h2 class="music__title title">Музыкальная пауза</h2>
         <p class="music__text">
           В отрочестве я увлекался музыкой. Можно послушать. Но лучше не надо.)
@@ -330,8 +351,12 @@
     <!--end MAIN -->
 
     <!-- FOOTER -->
-    <footer class="footer">
-      <h5 class="title">Контакты будут тут</h5>
+    <footer class="footer" id="footer">
+      <h4 class="footer__title title">Контакты:</h4>
+      <div class="footer__contacts-inner">
+        <a class="footer__contacts link" href="mailto:odlopez1@yandex.ru">odlopez1@yandex.ru</a>
+        <a class="footer__contacts link" href="skype:odlopex">Skype</a>
+      </div>
     </footer>
     <!--end FOOTER -->
   </div>
@@ -341,6 +366,8 @@
   <script src="js/toggle.js"></script>
   <script src="js/animate.js"></script>
   <script src="js/code.js"></script>
+  <script src="js/slipping.js"></script>
+  <script src="js/mobile-menu.js"></script>
   <!-- SCRIPTS -->
 </body>
 </html>
