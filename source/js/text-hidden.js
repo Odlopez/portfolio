@@ -10,11 +10,11 @@
     var buttonWrap = e.target.closest('.card__button-wrap');
     var height = parent.clientHeight + parent.querySelector('.card__copy-wrap').clientHeight;
 
-    parent.style.maxHeight = `${height}px`;
+    parent.style.maxHeight = height + 'px';
     buttonWrap.style.position = 'relative';
 
     e.target.removeEventListener('click', onTextHideButtonClick);
-    e.target.innerHTML = `Свернуть &#8593;`;
+    e.target.innerHTML = 'Свернуть &#8593;';
     e.target.addEventListener('click', onTextHideButtonClickClose);
   }
 
@@ -26,16 +26,16 @@
     e.target.closest('.card__button-wrap').style.position = 'absolute';
 
     e.target.removeEventListener('click', onTextHideButtonClickClose);
-    e.target.textContent = `Читать далее...`;
+    e.target.textContent = 'Читать далее...';
     e.target.addEventListener('click', onTextHideButtonClick);
   }
 
-  textBlocks.forEach(function(it, i) {
+  Array.prototype.slice.apply(textBlocks).forEach(function (it) {
     if (it.querySelector('.card__copy-wrap').clientHeight > it.clientHeight) {
       var textHideButtonWrap = it.querySelector('.card__button-wrap');
       var textHideButton = textHideButtonWrap.querySelector('.card__text-button');
-
-      textHideButtonWrap.style.display = 'flex';
+      console.log('Зашло')
+      textHideButtonWrap.style.display = 'block';
       textHideButton.addEventListener('click', onTextHideButtonClick);
     }
   });

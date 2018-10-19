@@ -2,12 +2,12 @@
 
 (function () {
   var DURATION_SCROLL = 400;
-  var ancors = document.querySelectorAll(`[href^="#"]`);
+  var ancors = document.querySelectorAll('[href^="#"]');
 
   var scrolling = function (e) {
     e.preventDefault();
 
-    var target = e.target.href ? e.target.href.replace( /[^#]*(.*)/, '$1' ) : ``;
+    var target = e.target.href ? e.target.href.replace( /[^#]*(.*)/, '$1' ) : '';
 
     if (target.length > 1) {
       var from = window.pageYOffset;
@@ -26,6 +26,6 @@
   };
 
   Array.prototype.slice.apply(ancors).forEach(function (it) {
-    it.addEventListener(`click`, scrolling);
+    it.addEventListener('click', scrolling);
   });
 })();

@@ -1,15 +1,15 @@
 'use strict';
 
 (function () {
-  const inputs = document.querySelectorAll('.about-you__input');
-  const inputsObj = {
+  var inputs = document.querySelectorAll('.about-you__input');
+  var inputsObj = {
     inputs: inputs,
     quantity: 0,
     counter: 0,
     checkFlag: function() {
       this.quantity = 0;
 
-      for (let i = 0; i < this.inputs.length; i++) {
+      for (var i = 0; i < this.inputs.length; i++) {
         if (this.inputs[i].checked) {
           this.quantity++;
         }
@@ -25,13 +25,13 @@
     }
   };
 
-  const getRandomNumber = function (to, from) {
+  var getRandomNumber = function (to, from) {
     from = from || 0;
     return Math.round(Math.random() * (to - from) + from);
   };
 
-  const uncheckRandomInput = function (elem) {
-    let index = 0;
+  var uncheckRandomInput = function (elem) {
+    var index = 0;
 
     do {
       index = getRandomNumber(0, inputs.length - 1);
@@ -40,7 +40,7 @@
     inputs[index].checked = false;
   }
 
-  for (let i = 0; i < inputs.length; i++) {
+  for (var i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener('click', function(evt) {
       inputsObj.checkFlag();
 
