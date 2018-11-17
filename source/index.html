@@ -52,6 +52,28 @@
           <path fill="#F2EFF0" d="M78.3 55.5h36.4V64H78.3v-8.5z"></path>
         </g>
       </symbol>
+      <symbol id="volume" viewBox="0 0 20 20">
+        <g fill="#0E7360" stroke="#0E7360" stroke-miterlimit="10" preserveAspectRatio="xMidYMin slice">
+          <polygon class="st0" points="7.8,15.3 7.8,6 17.8,0.8 17.8,19.3 "/>
+          <rect x="2.5" y="6" class="st0" width="3.3" height="9.2"/>
+        </g>
+      </symbol>
+      <symbol id="paused" viewBox="0 0 20 20">
+        <g fill="#0E7360" stroke="#0E7360" stroke-miterlimit="10">
+          <rect x="3.2" y="2.8" class="st0" width="4.8" height="14.2"/>
+          <rect x="12" y="2.8" class="st0" width="4.8" height="14.2"/>
+        </g>
+      </symbol>
+      <symbol id="play" viewBox="0 0 20 20">
+        <g fill="#0E7360">
+          <polygon points="0,0 0,20 20,10 "/>
+        </g>
+      </symbol>
+      <symbol id="download" viewBox="0 0 20 25">
+        <g fill="#0E7360">
+          <polygon points="5,0 15,0 15,15 20,15 10,25 0,15 5,15 5,0"/>
+        </g>
+      </symbol>
     </svg>
   </div>
   <!--end svg-sprite -->
@@ -328,17 +350,17 @@
           В отрочестве я увлекался музыкой. Можно послушать. Но лучше не надо.)
         </p>
         <div class="misuc__inner">
-          <audio class="music__audio" controls volume="0.5">
+          <audio class="music__audio" data-play="" controls volume="0.5">
             <source src="audios/Питер.ogg" type="audio/ogg">
             <source src="audios/Питер.mp3" type="audio/mp3">
             Ваш браузер не поддерживает тег audio!
           </audio>
-          <audio class="music__audio" controls volume="0.5">
+          <audio class="music__audio" data-play="" controls volume="0.5">
             <source src="audios/Славянин.ogg" type="audio/ogg">
             <source src="audios/Славянин.mp3" type="audio/mp3">
             Ваш браузер не поддерживает тег audio!
           </audio>
-          <audio class="music__audio" controls volume="0.5">
+          <audio class="music__audio" data-play="" controls volume="0.5">
             <source src="audios/8-марта.ogg" type="audio/ogg">
             <source src="audios/8-марта.mp3" type="audio/mp3">
             Ваш браузер не поддерживает тег audio!
@@ -346,7 +368,6 @@
         </div>
       </section>
       <!--end MUSIC -->
-
     </main>
     <!--end MAIN -->
 
@@ -363,12 +384,14 @@
 
   <!-- SCRIPTS -->
   <script src="js/polifill.js"></script>
+  <script src="js/download.js"></script>
   <script src="js/text-hidden.js"></script>
   <script src="js/toggle.js"></script>
   <script src="js/animate.js"></script>
   <script src="js/code.js"></script>
   <script src="js/slipping.js"></script>
   <script src="js/mobile-menu.js"></script>
+  <script src="js/music.js"></script>
   <!-- SCRIPTS -->
 </body>
 </html>

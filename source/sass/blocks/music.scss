@@ -1,13 +1,13 @@
-.music {
-
-}
-
 .misuc__inner {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
 }
 
 .music__audio {
   margin-bottom: 10px;
+}
+
+.music__custom-audio {
+  margin-bottom: 15px;
 }

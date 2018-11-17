@@ -34,7 +34,6 @@
     if (it.querySelector('.card__copy-wrap').clientHeight > it.clientHeight) {
       var textHideButtonWrap = it.querySelector('.card__button-wrap');
       var textHideButton = textHideButtonWrap.querySelector('.card__text-button');
-      console.log('Зашло')
       textHideButtonWrap.style.display = 'block';
       textHideButton.addEventListener('click', onTextHideButtonClick);
     }
