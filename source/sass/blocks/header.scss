@@ -1,7 +1,5 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: $dgray;
   padding: 10px 0;
 
   &--open {
@@ -40,6 +38,12 @@
       background-image: url("../img/menu-btn-close.svg");
     }
   }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__overlay {

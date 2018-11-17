@@ -6,6 +6,11 @@
   height: 60px;
 
   border: 2px solid $bluegreen;
+
+  & svg {
+    fill: $bluegreen;
+    stroke: $bluegreen;
+  }
 }
 
 .custom-audio__play {
@@ -19,6 +24,19 @@
 
   background-color: transparent;
   border: none;
+
+  & svg {
+    fill: $bluegreen;
+    stroke: $bluegreen;
+  }
+
+  &:hover,
+  &:focus {
+    & svg {
+      fill: $green;
+      stroke: $green;
+    }
+  }
 }
 
 .custom-audio__play-svg,
@@ -59,6 +77,11 @@
 
   background-color: $bluegreen;
   transform: translateY(-50%);
+
+  &:hover,
+  &:focus {
+    background-color: $green;
+  }
 }
 
 .custom-audio__volume-inner {
@@ -86,6 +109,7 @@
 
 .custom-audio__slider--volume {
   left: 100%;
+
   transform: translate(-100%, -50%);
 }
 
@@ -97,4 +121,21 @@
 
   background-color: transparent;
   border: none;
+
+  & svg {
+    fill: $bluegreen;
+    stroke: $bluegreen;
+  }
+
+  &:hover,
+  &:focus {
+    & svg {
+      fill: $green;
+      stroke: $green;
+    }
+  }
+}
+
+.custom-audio__download-svg {
+  width: 100%;
 }

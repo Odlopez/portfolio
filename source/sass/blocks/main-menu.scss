@@ -1,10 +1,17 @@
+.main-menu {
+  @media (max-width: $tablet) {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
 .main-menu__list {
   list-style: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     display: none;
   }
 }
@@ -12,7 +19,7 @@
 .main-menu__item {
   padding: 10px;
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     font-size: 30px;
   }
 }
@@ -24,7 +31,7 @@
   border: none;
   display: none;
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     display: block;
   }
 }

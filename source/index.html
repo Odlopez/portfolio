@@ -52,36 +52,16 @@
           <path fill="#F2EFF0" d="M78.3 55.5h36.4V64H78.3v-8.5z"></path>
         </g>
       </symbol>
-      <symbol id="volume" viewBox="0 0 20 20">
-        <g fill="#0E7360" stroke="#0E7360" stroke-miterlimit="10" preserveAspectRatio="xMidYMin slice">
-          <polygon class="st0" points="7.8,15.3 7.8,6 17.8,0.8 17.8,19.3 "/>
-          <rect x="2.5" y="6" class="st0" width="3.3" height="9.2"/>
-        </g>
-      </symbol>
-      <symbol id="paused" viewBox="0 0 20 20">
-        <g fill="#0E7360" stroke="#0E7360" stroke-miterlimit="10">
-          <rect x="3.2" y="2.8" class="st0" width="4.8" height="14.2"/>
-          <rect x="12" y="2.8" class="st0" width="4.8" height="14.2"/>
-        </g>
-      </symbol>
-      <symbol id="play" viewBox="0 0 20 20">
-        <g fill="#0E7360">
-          <polygon points="0,0 0,20 20,10 "/>
-        </g>
-      </symbol>
-      <symbol id="download" viewBox="0 0 20 25">
-        <g fill="#0E7360">
-          <polygon points="5,0 15,0 15,15 20,15 10,25 0,15 5,15 5,0"/>
-        </g>
-      </symbol>
     </svg>
+    <include src="build/img/sprite.svg"></include>
   </div>
   <!--end svg-sprite -->
-  <div class="container">
-    <!-- HEADER -->
-    <header class="header">
-      <div class="header__overlay"></div>
-      <a class="header__logo-link"href="#">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__overlay"></div>
+    <div class="container header__container">
+      <a class="header__logo-link">
         <svg class="header__svg" width="150" height="50">
           <use xlink:href="#logo-svg"></use>
         </svg>
@@ -106,9 +86,11 @@
         </ul>
         <button class="main-menu__button" type="button"></button>
       </nav>
-    </header>
+    </div>
+  </header>
     <!--end HEADER -->
 
+  <div class="container">
     <!-- MAIN -->
     <main class="main">
       <h1 class="title main__title">Heading 1</h1>
@@ -125,7 +107,7 @@
           Имею опыт в руководящей должности, так что отлично знаю, чего руководитель ждет от работника.
         </p>
         <p class="about-me__text">
-          В текущий момент времени я работаю верстальщиком в <a class="link" href="https://liga-a.ru/" target="_blank">Лиге-А</a>
+          В текущий момент времени я работаю верстальщиком в&nbsp;<a class="link" href="https://liga-a.ru/" target="_blank">Лиге&#8209;А</a>
         </p>
         <h4 class="title about-me__subtitle">В работе использую:</h4>
         <ul class="about-me__list">
@@ -349,7 +331,7 @@
         <p class="music__text">
           В отрочестве я увлекался музыкой. Можно послушать. Но лучше не надо.)
         </p>
-        <div class="misuc__inner">
+        <div class="music__inner">
           <audio class="music__audio" data-play="" controls volume="0.5">
             <source src="audios/Питер.ogg" type="audio/ogg">
             <source src="audios/Питер.mp3" type="audio/mp3">
@@ -370,17 +352,41 @@
       <!--end MUSIC -->
     </main>
     <!--end MAIN -->
-
-    <!-- FOOTER -->
-    <footer class="footer" id="footer">
-      <h4 class="footer__title title">Контакты:</h4>
-      <div class="footer__contacts-inner">
-        <a class="footer__contacts link" href="mailto:odlopez1@yandex.ru">odlopez1@yandex.ru</a>
-        <a class="footer__contacts link" href="skype:odlopex">Skype</a>
-      </div>
-    </footer>
-    <!--end FOOTER -->
   </div>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="container footer__container">
+      <h2 class="footer__title title">Контакты:</h2>
+      <a class="footer__logo-link">
+        <svg width="150" height="50">
+          <use xlink:href="#logo-svg"></use>
+        </svg>
+      </a>
+      <div class="footer__contacts-inner">
+        <a class="footer__contacts link" href="mailto:odlopez1@yandex.ru" target="_blank">
+          odlopez1@yandex.ru
+          <svg class="footer__svg" width="40" height="40">
+            <use xlink:href="#email-icon"></use>
+          </svg>
+        </a>
+        <a class="footer__contacts link" href="skype:odlopex" target="_blank">
+          Skype
+          <svg class="footer__svg" width="40" height="40">
+            <use xlink:href="#skype-icon"></use>
+          </svg>
+        </a>
+        <a class="footer__contacts link" href="https://github.com/Odlopez" target="_blank">
+          Github
+          <svg class="footer__svg" width="40" height="40">
+            <use xlink:href="#github-icon"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!--end FOOTER -->
+
 
   <!-- SCRIPTS -->
   <script src="js/polifill.js"></script>

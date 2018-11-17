@@ -28,6 +28,10 @@ html {
   @media (max-width: $tablet) {
     font-size: #{$size-t}px;
   }
+
+  @media (max-width: $mobile) {
+    font-size: #{$size-m}px;
+  }
 }
 
 *,
